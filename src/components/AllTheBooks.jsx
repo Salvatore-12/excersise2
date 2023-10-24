@@ -11,11 +11,11 @@ const AllTheBooks=()=>{
         {FantasyBooks.map((books,i)=>{
         return( <Col xs={6} sm={4} md={3} lg={2} key={i}>
                 <Card>
-        <Card.Img variant="top" src={books.img} />
+        <Card.Img style={{height:"220px"}} src={books.img} />
         <Card.Body>
           <Card.Title>{books.title}</Card.Title>
-          <Card.Text>
-           {books.price} €
+          <Card.Text className='text-nowrap text-truncate'>
+           {books.price}€
           </Card.Text>
           <Button variant="primary">{books.category}</Button>
         </Card.Body>
