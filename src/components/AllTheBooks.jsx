@@ -13,8 +13,8 @@ const AllTheBooks=()=>{
                 <Card>
         <Card.Img style={{height:"220px"}} src={books.img} />
         <Card.Body>
-          <Card.Title>{books.title}</Card.Title>
-          <Card.Text className='text-nowrap text-truncate'>
+          <Card.Title className='text-nowrap text-truncate'>{books.title}</Card.Title>
+          <Card.Text >
            {books.price}€
           </Card.Text>
           <Button variant="primary">{books.category}</Button>
