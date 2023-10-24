@@ -10,7 +10,7 @@ const AllTheBooks=()=>{
         <Row gap={2} className='mt-3'>
         {FantasyBooks.map((books,i)=>{
         return( <Col xs={6} sm={4} md={3} lg={2} key={i}>
-                <Card>
+                <Card className='mt-3'>
         <Card.Img style={{height:"220px"}} src={books.img} />
         <Card.Body>
           <Card.Title className='text-nowrap text-truncate'>{books.title}</Card.Title>
