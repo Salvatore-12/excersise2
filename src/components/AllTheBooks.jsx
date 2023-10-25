@@ -12,9 +12,9 @@ const AllTheBooks=()=>{
         return( <Col xs={6} sm={4} md={3} lg={2} key={i}>
                 <Card className='mt-3'>
         <Card.Img style={{height:"220px"}} src={books.img} />
-        <Card.Body>
+        <Card.Body className='text-center'>
           <Card.Title className='text-nowrap text-truncate'>{books.title}</Card.Title>
-          <Card.Text >
+          <Card.Text  className='text-start'>
            {books.price}€
           </Card.Text>
           <Button variant="primary">{books.category}</Button>

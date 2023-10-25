@@ -4,6 +4,9 @@ import MyNav from './components/MyNav';
 import MyFooter from './components/MyFooter';
 import Welcome from './components/Welcome';
 import AllTheBooks from './components/AllTheBooks';
+import BookList from './components/BookList';
+// import SingleBook from './components/SingleBook';
+import fantasy from"./data/fantasy.json"
 
 
 function App() {
@@ -12,7 +15,7 @@ function App() {
       <header>
         <MyNav />
         <Welcome/>
-        <AllTheBooks/>
+    <BookList arrayOfBooks={fantasy} />
         <MyFooter />
 
       </header>
