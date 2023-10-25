@@ -23,7 +23,7 @@ render(){
             this.setState({selected:false})
            }
            
-            }} className={`mt-3${this.state.selected ? "border-5 border-danger":""  }`} >
+            }} className={`mt-3${this.state.selected ? "border-5 border-danger":""}`} >
     <Card.Img  src={this.props.oneBook.img} />
     <Card.Body className='text-center'>
       <Card.Title className='text-nowrap text-truncate'>{this.props.oneBook.title}</Card.Title>

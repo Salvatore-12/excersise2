@@ -33,8 +33,7 @@ class BookList extends Component{
       <Button variant="primary" type="submit">
         cerca
       </Button>
-    </Form>
-  
+            </Form>
             </>
             <Row>
                 {this.props.arrayOfBooks.map((book)=>{
