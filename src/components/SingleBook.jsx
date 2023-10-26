@@ -1,7 +1,7 @@
 
 import { Component } from 'react';
 import Card from 'react-bootstrap/Card';
-
+import CommentArea from './CommentArea';
 
 class SingleBook extends Component{  
 
@@ -11,11 +11,13 @@ selected:false
 
 render(){
         return( 
+          
             <Card onClick={(e)=>{
            if (this.state.selected === false) {
            
             this.setState({
                 selected:true
+                
 
             
             })
@@ -29,8 +31,17 @@ render(){
       <Card.Title className='text-nowrap text-truncate'>{this.props.oneBook.title}</Card.Title>
       <Card.Title className='text-nowrap text-truncate'>{this.props.oneBook.price}€</Card.Title>
     </Card.Body>
+    {this.state.selected && <CommentArea bookId={this.props.oneBook.asin} /> }
+    
+  
   </Card>
-  )}  
+   
+    
+  
+  )} 
+  
+  
+  
         }
 
     export default SingleBook;   

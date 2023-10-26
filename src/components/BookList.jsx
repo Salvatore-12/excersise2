@@ -4,9 +4,8 @@ import SingleBook from "./SingleBook"
 
 class BookList extends Component{
  state={
-     search:{
-        name:""
-      }
+     searchValue:""
+      
     }
     render(){
     return(
@@ -15,15 +14,11 @@ class BookList extends Component{
             <Form>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Cerca i tuoi libri preferiti</Form.Label>
-        <Form.Control type="text" placeholder="cerca un libro" value={this.state.search.name} onChange={
-                    
-                    (e) => {
-                      this.setState({
-                       
-                        search: {
-                          
-                          ...this.state.search,
-                          name:e.target.value,
+        <Form.Control type="text" placeholder="cerca un libro" value={this.state.searchValue} 
+        onChange={(e) =>{this.setState({
+                          search: {
+                         ...this.state.search,
+                         searchValue:e.target.value,
                         },
                         
                       })
