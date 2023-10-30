@@ -37,7 +37,8 @@ try {
     console.log(error)
 }
 }
-componentDidMount(){
+componentDidAbout(prevProps,prevState){
+    if(prevProps.bookAsin !== this.props.bookAsin){}
     this.getComments()
 }
     
@@ -52,7 +53,6 @@ componentDidMount(){
         <p>{this.state.review.rate}</p>
         <p>{this.state.review.elementId}</p>
         </div>
-        
         </>
         )
     }

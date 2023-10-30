@@ -13,26 +13,20 @@ render(){
         return( 
           
             <Card onClick={(e)=>{
+              this.props.setBook(this.props.oneBook.asin)
            if (this.state.selected === false) {
-           
             this.setState({
-                selected:true
-                
-
-            
+                selected:true    
             })
            } else {
             this.setState({selected:false})
            }
-           
             }} className={`mt-3${this.state.selected ? "border-5 border-danger":""}`} >
     <Card.Img  src={this.props.oneBook.img} />
     <Card.Body className='text-center'>
       <Card.Title className='text-nowrap text-truncate'>{this.props.oneBook.title}</Card.Title>
       <Card.Title className='text-nowrap text-truncate'>{this.props.oneBook.price}€</Card.Title>
     </Card.Body>
-    {this.state.selected && <CommentArea bookId={this.props.oneBook.asin} /> }
-    
   
   </Card>
    
